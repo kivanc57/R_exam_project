@@ -1,4 +1,4 @@
-data <- read.table("/Users/admin/Desktop/Courses/DATA1/miniprojekt - indonesie/indonesie.txt", header=TRUE, dec=",", sep="\t", row.names=1)
+data <- read.table("/Users/admin/Desktop/indonesie.txt", header=TRUE, dec=",", sep="\t", row.names=1)
 #We do not include the Gender feature since it binary so that we do not complicate the calculations.
 my_data <- data[,-8]
 colnames(my_data)
@@ -32,14 +32,15 @@ boxplot(my_data)
 #However, for the other places, variance is the highest. Meaning that, there is not a significant agreement among people voted.
 #On the other hand, the there is one person that voted "significantly high" that we can see as 10 and 9 in Bali_Safari and Prambanan respectively.
 #Those are outliers.
+x <- my_data$Prambanan
+y <- my_data$Azul_Beach_Club
+plot(x, y)
 
-plot(my_data[1:2])
-distance_matrix <- dist(my_data[1:2], method="euclidean")
 
 cor ( my_data, method="spearman" )
 #I chosed Spearman because it  analyses not only linear but also monotone vector based on rankings.
 library(corrgram)
-corrgram(data)
+corrgram(my_data)
 corrgram(my_data, upper.panel=panel.conf, lower.panel=panel.pie)
 #The bigger percent of the coloured pie is, the higher correlation they have.
 corrgram(my_data, upper.panel=panel.conf, lower.panel=panel.ellipse)
@@ -63,6 +64,10 @@ PCA_result$loadings
 distance_matrix <- dist(my_data, method="euclidean")
 map <- cmdscale(distance_matrix)
 plot(map)
+text(map, pos = 4, labels = row.names(my_data))
+my_data[2,]
+my_data[6,]
+my_data[75,]
 MDS_gof <- cmdscale(distance_matrix, eig=TRUE)$GOF
 MDS_gof
 #GOF ≈ 80%. We have almost 80 percent of information used for MDS.
@@ -70,10 +75,10 @@ MDS_gof
 #TIP: Look at middle points of clusters to deduce their identity.
 #Maybe look at extreme of x and y to identify the osy.
 
-#HC?
 library(plotly)
 hc <- hclust(distance_matrix, method="average")
 my_dendrogram <- as.dendrogram(hc)
-?plot_dendro(my_dendrogram, height=600, width=1000)
-
-#TSNE?https://plotly.com/r/t-sne-and-umap-projections/
+plot(my_dendrogram, horiz=T)
+png("/Users/admin/Desktop/my_hc.png", width=10, height=19, units="in", res=600)
+plot(my_dendrogram, horiz=T)
+dev.off()
