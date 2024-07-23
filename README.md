@@ -119,7 +119,7 @@ dev.off()
 ![Scatterplot of Azul_Beach_Club/Mirror_Bali](/screenshots/scatterplot.png?raw=true)
 
 ## Conclusions
-The application of these analytical methods is highly beneficial for any type of data analysis. We conducted a step-by-step analysis, first focusing on individual features and then on the dataset as a whole. We identified key statistical indices and concluded the report with a detailed cluster analysis.
+Applying these analytical methods has proven highly beneficial for comprehensive data analysis. We conducted a step-by-step evaluation, starting with individual features and progressing to a holistic view of the dataset. Key statistical indices were identified, and the report culminates in a detailed cluster analysis.
 
 * More comprehensive report is avalable in the project folder within `report.docx`.
 
