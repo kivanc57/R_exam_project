@@ -123,6 +123,12 @@ Applying these analytical methods has proven highly beneficial for comprehensive
 
 * More comprehensive report is avalable in the project folder within `report.docx`.
 
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](https://github.com/kivanc57/R_explanatory_analysis/blob/main/LICENSE) file for details.
+
+
+
 ## Contact
 Let me know if there are any specific details you’d like to adjust or additional sections you want to include!  
 * **Email**: kivancgordu@hotmail.com
