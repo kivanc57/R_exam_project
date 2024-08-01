@@ -1,20 +1,26 @@
 # Indonesia Evaluation Data Analysis
 
-## Aim
+## Aim 🎯
 The objective of this project is to apply the concepts learned in the DATA1 course, specifically Exploratory Data Analysis (EDA) and Descriptive Data Analysis (DDA), to evaluate and analyze data from Indonesia. Our goal is to conduct a thorough analysis of individual features and the dataset as a whole, providing comprehensive illustrations and descriptions of the process and methodology.
 
-## Solution
+## Solution 🤗
 This project involves the following steps:
 
 1. **Reading the Data**: The R script reads the entire dataset.
+   
 2. **Feature Analysis**: We examine the column names and select two random features to calculate their sum, mean, quartiles, and median. We then visualize these features using boxplots and scatter plots.
+   
 3. **Correlation Analysis**: We observe the correlation between various dimensions using Spearman's method and visualize the results with corrgrams.
+   
 4. **Logistic Regression**: We analyze the correlation between binary data (Gender) and other features using logistic regression.
+   
 5. **Principal Component Analysis (PCA)**: We conduct PCA to reduce dimensionality and visualize the data.
+    
 6. **Multidimensional Scaling (MDS)**: We apply MDS to visualize the similarity or dissimilarity between data points.
+    
 7. **Clustering**: We perform hierarchical clustering and visualize the dendrogram.
 
-## R Script
+## R Script 🌱
 ```R
 data <- read.table("/Users/admin/Desktop/data.txt", header=TRUE, dec=",", sep="\t", row.names=1)
 #We do not include the Gender feature since it binary so that we do not complicate the calculations.
@@ -102,7 +108,8 @@ plot(my_dendrogram, horiz=T)
 dev.off()
 ```
 
-## Screenshots
+## Screenshots 📸
+
 ### Pie Chart Correlation Graph of Each Feature
 ![Pie Chart Correlation](/screenshots/correlation1.png?raw=true)
 
@@ -118,18 +125,15 @@ dev.off()
 ### Scatterplot Graph of 'Azul_Beach_Club' and 'Mirror_Bali'
 ![Scatterplot of Azul_Beach_Club/Mirror_Bali](/screenshots/scatterplot.png?raw=true)
 
-## Conclusions
+## Conclusions 💯
 Applying these analytical methods has proven highly beneficial for comprehensive data analysis. We conducted a step-by-step evaluation, starting with individual features and progressing to a holistic view of the dataset. Key statistical indices were identified, and the report culminates in a detailed cluster analysis.
 
 * More comprehensive report is avalable in the project folder within `report.docx`.
 
-## License
-
+## License 🔑
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](https://github.com/kivanc57/R_explanatory_analysis/blob/main/LICENSE) file for details.
 
-
-
-## Contact
+## Contact 📩
 Let me know if there are any specific details you’d like to adjust or additional sections you want to include!  
 * **Email**: kivancgordu@hotmail.com
 * **Version**: 1.0.0
