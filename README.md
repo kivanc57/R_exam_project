@@ -113,14 +113,22 @@ dev.off()
 ### Pie Chart Correlation Graph of Each Feature
 ![Pie Chart Correlation](/screenshots/correlation1.png?raw=true)
 
+---
+
 ### Ellipse Correlation of Graph Each Feature
 ![Pie Chart Correlation](/screenshots/correlation2.png?raw=true)
+
+---
 
 ### Logistic Regression Graph of 'Gender' and 'Prombanan' columns
 ![Regression of Gender/Prombanan](/screenshots/regression1.png?raw=true)
 
+---
+
 ### Logistic Regression Graph of 'Gender' and 'Azul_Beach_Club' columns
 ![Regression of Gender/Azul_Beach_Club](/screenshots/regression2.png?raw=true)
+
+---
 
 ### Scatterplot Graph of 'Azul_Beach_Club' and 'Mirror_Bali'
 ![Scatterplot of Azul_Beach_Club/Mirror_Bali](/screenshots/scatterplot.png?raw=true)
