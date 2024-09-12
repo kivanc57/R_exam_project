@@ -35,6 +35,3 @@ COPY --from=builder src ./src
 
 # Restore the environment
 RUN Rscript -e "renv::restore(lockfile = 'renv.lock')"
-
-# Run the application
-CMD ["Rscript", "./src/main.R"]
