@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  r_explanatory_analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - ./src:/home/R_explanatory_analysis
+    command: ["Rscript", "/home/R_explanatory_analysis/src/main.R"]

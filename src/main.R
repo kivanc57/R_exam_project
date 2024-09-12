@@ -1,3 +1,7 @@
+#Initialize libraries
+library(plotly)
+library(corrgram)
+
 data <- read.table("/Users/admin/Desktop/data.txt", header=TRUE, dec=",", sep="\t", row.names=1)
 #We do not include the Gender feature since it binary so that we do not complicate the calculations.
 my_data <- data[,-8]
@@ -39,7 +43,6 @@ plot(x, y)
 
 cor ( my_data, method="spearman" )
 #I chosed Spearman because it  analyses not only linear but also monotone vector based on rankings.
-library(corrgram)
 corrgram(my_data)
 corrgram(my_data, upper.panel=panel.conf, lower.panel=panel.pie)
 #The bigger percent of the coloured pie is, the higher correlation they have.
@@ -75,7 +78,6 @@ MDS_gof
 #TIP: Look at middle points of clusters to deduce their identity.
 #Maybe look at extreme of x and y to identify the osy.
 
-library(plotly)
 hc <- hclust(distance_matrix, method="average")
 my_dendrogram <- as.dendrogram(hc)
 plot(my_dendrogram, horiz=T)
