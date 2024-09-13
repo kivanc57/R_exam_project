@@ -1,8 +1,5 @@
 language: bash
 
-arch:
-  - arm64
-
 services:
   - docker
 
