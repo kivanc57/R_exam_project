@@ -3,6 +3,7 @@
 FROM rocker/r-base:4.4.0 AS base
 
 # Install necessary dependencies
+# Install necessary dependencies
 RUN apt-get update --fix-missing && \
     apt-get install -y \
     libcurl4-openssl-dev \
@@ -13,7 +14,6 @@ RUN apt-get update --fix-missing && \
     libtiff-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
 
 # Install project-dependent packages
 RUN R -e "install.packages(c('plotly', 'corrgram'))"
