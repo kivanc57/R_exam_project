@@ -34,4 +34,4 @@ COPY --from=builder renv.lock ./renv.lock
 COPY --from=builder src ./src
 
 # Restore the environment
-RUN Rscript -e "renv::restore(lockfile = 'renv.lock')"
+RUN Rscript -e "install.packages('renv'); renv::restore(lockfile = 'renv.lock')"

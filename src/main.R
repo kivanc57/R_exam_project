@@ -2,7 +2,7 @@
 library(plotly)
 library(corrgram)
 
-data <- read.table("/Users/admin/Desktop/data.txt", header=TRUE, dec=",", sep="\t", row.names=1)
+data <- read.table("data.txt", header=TRUE, dec=",", sep="\t", row.names=1)
 #We do not include the Gender feature since it binary so that we do not complicate the calculations.
 my_data <- data[,-8]
 colnames(my_data)
