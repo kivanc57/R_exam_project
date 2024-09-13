@@ -37,4 +37,5 @@ manual.pdf
 README.md
 .gitattributes
 .gitignore
+.travis.yml
 renv/
