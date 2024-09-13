@@ -5,7 +5,7 @@ services:
 
 env:
   global:
-    - DOCKERHUB_REPO=printf
+    - DOCKERHUB_REPO=r_explanatory_analysis
 
 branches:
   only:
